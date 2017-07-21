@@ -1,0 +1,38 @@
+This approach is based on the following architecture:
+    - Mongodb for the TimeSeries and Metadata
+    - python Script for the WebServer and Data Screening
+    - flask architecture for web pages
+    - Javascript scripting: d3.js, dc.js, queue.js, crossfilter.js
+    - CSS style:
+        - Bootstrap
+        - Templates from: keen-dashboards.css
+
+To execute this project:
+    1. Import the csv files to mongodb collection in the folder merged_data by:
+        mongoimport -d project_db -c metadata --type csv --file metadata.csv --headerline
+        mongoimport -d project_db -c csv --type csv --file merged_data.csv --headerline
+
+	OPEN the directory: /Thesis_project/lib
+
+    2. Transform the current timestamp format to 'yyyy-mm-dd' by using:
+        python3 clone_time_series.py -or csv -de original_time_series
+
+    3. Clone original_time_series to filtered_time_series (in order to have a backup of the original)
+        python3 clone_time_series.py -or original_time_series -de filtered_time_series
+
+    4. Find the upper and lower limits. Filter values that are not in the statistical range of each variable by:
+        python3 up_UCL-low_LCL_filter_v5.py -db project_db -sr original_time_series -fi filtered_time_series -save filter_register
+
+    5. Add labeled features based on the timestamp that will help to process the timeseries by:
+        python3 add_feature_db.py
+
+    6. Detect flat and nan days by:
+        python3 flat_nan_series_detection.py
+
+    7. Detect outliers based on six sigma approach:
+        python3 outlier_detection_v3.py -sr filtered_time_series -save detection_outlier -ft 3.0
+
+    8. Compute the correlation matrix by:
+        python3 correlation_matrix_v1.py
+
+Navegate in the project by:

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BDV &raquo; Records  </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <link rel="stylesheet" type="text/css" href="../static/lib/js/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../static/lib/css/keen-dashboards.css" />
+    <link rel="stylesheet" type="text/css" href="../static/lib/css/dc.css" />
+    <link rel="stylesheet" type="text/css" href="../static/lib/js/bootstrap-datepicker/dist/css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/custom.css" />
+</head>
+<body class="application">
+
+<div  class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div id="menu_bar" class="container-fluid">
+        <!---HERE MY MENU-->
+    </div>
+</div>
+
+<div class="container-fluid">
+    <!----UP PANEL  --->
+    <div class="row">
+        <!----LEFT PANEL  --->
+        <div class="col-sm-3">
+            <!-- category_buttons !-->
+            <div class="chart-wrapper" draggable="true" >
+                <div class="chart-title text-info" > <strong> Select category:</strong></div>
+                <div id="variable_category_buttons" class="chart-stage">
+                    <!--img data-src="holder.js/100%x650/white"!-->
+                </div>
+            </div>
+            <!-- category_buttons -->
+
+            <!-- variable_panel !-->
+            <div class="chart-wrapper row3" draggable="true">
+                <div class="chart-title"><strong> Select tag:</strong></div>
+                <div id="variable_panel" class="chart-stage">
+                    <!-- variable_panel !-->
+                </div>
+            </div>
+             <!-- variable_panel !-->
+
+            <!-- variable container !-->
+            <div class="chart-wrapper" draggable="true">
+                <div class="chart-title"><strong> Tag container:</strong></div>
+                <div id="variable_container" class="chart-stage">
+                    <!-- Contains the selected variables !-->
+                </div>
+                <div class="chart-notes"> Here the selected tags</div>
+            </div>
+            <!-- variable container !-->
+
+
+            <!-- Date container !-->
+            <div class="chart-wrapper" draggable="true">
+                <!-- CLICK HERE TO UPDATE THE DATE -->
+                <div class="chart-title row0">
+                    <div class="text-left" style="float:left">
+                        <strong>Date container: </strong>
+                    </div>
+                    <div class="text-right" style="float: right">
+                        <a id="change_date" href="#" class="btn btn-xs" onclick="apply_change_date()">
+                            <span class="glyphicon glyphicon-export"></span>
+                            Apply
+                        </a>
+                    </div>
+                </div>
+                <!-- CLICK HERE TO UPDATE THE DATE -->
+
+                <!-- Contains the date selector !-->
+                <div class="chart-stage">
+                    <div id="sandbox-container">
+                        <div class="input-daterange input-group" id="datepicker">
+                            <input type="text" class="input-sm form-control" id= "start_time" value="date start"  name="start" />
+                            <span class="input-group-addon">to</span>
+                            <input type="text" class="input-sm form-control" id= "end_time" value="date end" name="end" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Contains the date selector !-->
+
+                <div class="chart-notes" id="alert_time" > Select a date range, select date start and date end.
+                </div>
+            </div>
+            <!-- Date container !-->
+
+            <!-- What is this? !-->
+            <div class="chart-wrapper">
+                <div class="chart-title"><strong> What is this?: </strong> </div>
+                <div id="what_is_this" class="chart-stage">
+                    Prototype Menu
+                </div>
+                <div class="chart-notes"> Here a briefly description for this page</div>
+            </div>
+            <!-- variable container !-->
+
+        </div>
+        <!----LEFT PANEL  --->
+        <!----RIGHT PANEL  --->
+        <div class="col-sm-9 ">
+            <!---- TIME CHART --->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Time selector:
+                        </div>
+                        <div id="time-chart" class="chart-stage">
+                            <!--img data-src="holder.js/100%x50/white"-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---- TIME CHART --->
+
+
+            <!--- TABLE CHART  --->
+            <!-- TODO: update the name of chart_title, chart_update_button, chart------->
+            <!-- adapt the javascript function for updating
+            <!-- 3  names must correspond (Ex: chart -> chart1) --->
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            <div id="chart1_title"  class="col-lg-12 "> <strong>Records: </strong> </div>
+                            <!-- CLICK HERE TO UPDATE THE CHART -->
+                            <div class= "col-lg-12">
+                                <a id="chart1_update_button" href="#" class="btn btn-xs" onclick="update_table()">
+                                    <span class="glyphicon glyphicon-download-alt"></span>
+                                    Loading data... wait please.
+                                </a>
+                            </div>
+                            <!-- CLICK HERE TO UPDATE THE CHART -->
+
+                        </div>
+                        <div class="chart-stage">
+                            <!--img data-src="holder.js/100%x540/white"-->
+                            <table id="chart1" class="table"></table>
+                            <div id="paging">Showing <span id="begin">
+                            </span>-<span id="end"></span> of <span id="size"></span>.
+                            <input id="last" class="btn" type="Button" value="Last" onclick="last()" />
+                            <input id="next" class="btn" type="button" value="Next" onclick="next()"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--- TABLE CHART  --->
+
+        </div>
+
+        <div class="row">
+                <div class="col-sm-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Cell Title
+                        </div>
+                        <div class="chart-stage">
+                            <img data-src="holder.js/100%x120/white">
+                        </div>
+                        <div class="chart-notes">
+                             Notes about this chart
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Cell Title
+                        </div>
+                        <div class="chart-stage">
+                            <img data-src="holder.js/100%x120/white">
+                        </div>
+                        <div class="chart-notes">
+                            Notes about this chart
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Cell Title
+                        </div>
+                        <div class="chart-stage">
+                            <img data-src="holder.js/100%x120/white">
+                        </div>
+                        <div class="chart-notes">
+                            Notes about this chart
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<hr>
+
+<p class="small text-muted">Powered by <a href="https://keen.io">Keen IO</a></p>
+
+<!--/div-->
+
+<!--- Library for Keen IO template -->
+<script type="text/javascript" src="../static/lib/js/jquery/dist/jquery.min.js"></script>
+<!--script type="text/javascript" src="../static/lib/js/bootstrap/dist/js/bootstrap.min.js"></script-->
+<script type="text/javascript" src="../static/lib/js/holderjs/holder.js"></script>
+<script>Holder.add_theme("white", { background:"#fff", foreground:"#a7a7a7", size:10 });</script>
+<script type="text/javascript" src="../static/lib/js/keen-js/dist/keen.min.js"></script>
+<script type="text/javascript" src="../static/lib/js/meta.js"></script>
+<!--- Library for Keen IO template -->
+
+<!--- library for charts and crossfilter -->
+<script type="text/javascript" src="../static/lib/js/queue.js"></script>
+<script type="text/javascript" src="../static/lib/js/d3.js"></script>
+<script type="text/javascript" src="../static/lib/js/crossfilter.js"></script>
+<script type="text/javascript" src="../static/lib/js/dc.js"></script>
+
+<!-- datepicker -->
+<script type="text/javascript" src="../static/lib/js/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+
+<!--- Script fro menu and charts   -->
+<script type="text/javascript" src="../static/my_js/menu.js"></script>
+<script type="text/javascript" src="../static/my_js/record.js"></script>
+<!--- Library for Keen IO template -->
+
+</body>
+</html>

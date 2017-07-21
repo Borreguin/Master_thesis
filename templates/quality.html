@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<!-- Google Font -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+	
+
+	
+	<style>
+		html { font-size: 62.5%; } 
+
+		
+		
+		
+		
+		body {
+		  	font-size: 1rem;
+		  	font-family: 'Open Sans', sans-serif;
+		  	font-weight: 400;
+		  	fill: #8C8C8C;
+		  	text-align: center;
+		}
+
+        text.mono {
+            font-size: 9pt;
+            font-family: Consolas, courier;
+            fill: #aaa;
+        }
+		
+		
+		.timeLabel, .dayLabel {
+		    font-size: 9pt;
+            font-family: Consolas, courier;
+		    fill: #AAAAAA;
+		}
+
+		text.axis-workweek, text.axis-worktime {
+		    fill: #404040;
+		    font-weight: 400;
+		}
+		
+		text.no-text {
+			font-size: 0pt;
+			fill: #FFFFFF;
+		}
+
+		.title {
+            font-size: 18pt;
+            font-family: Consolas, courier;
+		    fill: #265f81;
+		}
+
+		.subtitle {
+		    font-size: 1.4rem;
+		    fill: #AAAAAA;
+		    font-weight: 300;
+		}
+		  
+		.credit {
+		    font-size: 1.2rem;
+		    fill: #AAAAAA;
+		    font-weight: 400;
+		}
+
+		.axis path, .axis tick, .axis line {
+		      fill: none;
+		      stroke: none;
+		  }
+
+		text {
+		      font-size: 1.2rem;
+		      fill: #AAAAAA;
+		      font-weight: 400;
+		}
+
+		.legendTitle {
+            font-size: 11pt;
+            font-family: Consolas, courier;
+            fill: #265f81;
+		}
+	</style>
+	
+</head>	
+<body>
+	
+	<div id="heatmap"></div>
+    <script src="static/my_js/data.js"></script>
+    <script type="text/javascript" src="../static/lib/js/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/lib/js/queue.js"></script>
+    <script type="text/javascript" src="../static/lib/js/d3.js"></script>
+	<script src="../static/my_js/heat_map.js"></script>
+
+
+</body>
+</html>

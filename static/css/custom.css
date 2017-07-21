@@ -1,0 +1,161 @@
+#number-projects-nd {
+    font-size: 60px;
+}
+
+#total-donations-nd {
+    font-size: 60px;
+}
+
+.dc-chart g.row text {
+    fill: black;
+    font-size: 12px;
+}
+
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+
+.span12 {
+  width: 940px;
+}
+
+.span11 {
+  width: 860px;
+}
+
+.span10 {
+  width: 780px;
+}
+
+.span9 {
+  width: 700px;
+}
+
+.span8 {
+  width: 620px;
+}
+
+.span7 {
+  width: 540px;
+}
+
+.span6 {
+  width: 460px;
+}
+
+.span5 {
+  width: 380px;
+}
+
+.span4 {
+  width: 300px;
+}
+
+.span3 {
+  width: 220px;
+}
+
+.span2 {
+  width: 140px;
+}
+
+.span1 {
+  width: 60px;
+}
+
+
+.row12 {
+  height: 940px;
+}
+
+.row11 {
+  height: 860px;
+}
+
+.row10 {
+  height: 780px;
+}
+
+.row9 {
+  height: 700px;
+}
+
+.row8 {
+  height: 620px;
+}
+
+.row7 {
+  height: 540px;
+}
+
+.row6 {
+  height: 460px;
+}
+
+.row5 {
+  height: 380px;
+}
+
+.row4 {
+  height: 300px;
+}
+
+.row3-4 {
+  height: 280px;
+}
+
+.row3 {
+  height: 220px;
+}
+
+.row2 {
+  height: 140px;
+}
+
+.row1 {
+  height: 60px;
+}
+
+.row0 {
+  height: 30px;
+}
+
+.fillbar {
+  height: 12px;
+  line-height: 12px;
+  border:1px solid rgba(120,120,120,0.5);
+  width: 120px;
+  display: inline-block;
+}
+
+.little-box {
+  width: 268px;
+  float: left;
+}
+
+.white-chart {
+    background: white;
+}
+
+.col-rs-37, .col-rs-63 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+    .col-rs-37, .col-rs-63 {
+        float: left;
+    }
+
+    .col-rs-63 {
+        width: 63%;
+    }
+
+    .col-rs-37 {
+        width: 37%;
+    }
+}
+

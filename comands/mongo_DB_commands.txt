@@ -1,0 +1,24 @@
+(mongo language)
+Change the DB name:
+db.copyDatabase('old_name', 'new_name');
+use old_name
+db.dropDatabase();
+
+import data from a csv file (run in cmd)
+$ mongoimport -d testgebaeude -c ede2 --type csv --file EDE.D2H_m4.csv --headerline
+
+find and modify: (python code)
+collection_filter.find_and_modify(query={'_id': idx},
+    update={"$set": {tag: records[x]['new_value']}})
+
+numeric transformation (python code):
+pd.to_numeric(df[tag], errors='coerce')
+
+drop nan values:
+df[tag].dropna(inplace=True)
+
+percentile analysis:
+df[tag].quantile(q=flat_percentile)
+
+Get values that are in the index
+mask3 = tag_df.index.isin(list_time)

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Table of Aggregated Data using list </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/lib/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/lib/css/dc.css"/>
+</head>
+<body>
+
+<div class="container">
+<script type="text/javascript" ></script>
+    <table id="list"></table>
+    <div id="paging">
+        Showing <span id="begin"></span>-<span id="end"></span> of <span id="size"></span>.
+        <input id="last" class="btn" type="Button" value="Last" onclick="javascript:last()" />
+        <input id="next" class="btn" type="button" value="Next" onclick="javascript:next()"/>
+    </div>
+
+    <script  type="text/javascript" src="../static/lib/js/queue.js"></script>
+    <script type="text/javascript" src="../static/lib/js/d3.js"></script>
+    <script type="text/javascript" src="../static/lib/js/crossfilter.js"></script>
+    <script type="text/javascript" src="../static/lib/js/dc.js"></script>
+    <script type="text/javascript" src="../static/lib/js/lodash.min.js"></script>
+    <script type="text/javascript" src="../static/my_js/list.js"></script>
+
+</div>
+</body>
+</html>

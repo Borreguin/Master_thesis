@@ -1,0 +1,160 @@
+.node {
+    font-size: 9pt;
+  font-family: Consolas, courier;
+  fill: #444;
+}
+
+.node:hover {
+  fill: #386da0;
+}
+
+.link {
+  stroke: #aeb4b6;
+    stroke-width: 1px;
+  stroke-opacity: 0.1;
+  fill: none;
+  pointer-events: none;
+}
+
+.node:hover,
+.node--source,
+.node--target {
+  font-weight: 700;
+}
+
+.node--source {
+  fill: #d62728;
+}
+.node--target {
+  fill: #386da0;
+}
+
+.legendLabel {
+		    font-size: 9pt;
+            font-family: Consolas, courier;
+		    fill: #18628b;
+		}
+
+.link--source,
+.link--target {
+  stroke-opacity: 0.2;
+  stroke-width: 2px;
+}
+
+.legendTitle {
+            font-size: 11pt;
+            font-family: Consolas, courier;
+            fill: #265f81;
+		}
+
+
+        text.mono {
+            font-size: 9pt;
+            font-family: Consolas, courier;
+            fill: #2b2b2b;
+        }
+
+
+		.timeLabel, .dayLabel {
+		    font-size: 9pt;
+            font-family: Consolas, courier;
+		    fill: #383838;
+		}
+
+		text.axis-workweek, text.axis-worktime {
+		    fill: black;
+		    font-weight: 400;
+		}
+
+		text.no-text {
+			font-size: 0pt;
+			fill: #FFFFFF;
+		}
+
+		.title {
+            font-size: 18pt;
+            font-family: Consolas, courier;
+		    fill: #265f81;
+		}
+
+		.subtitle {
+		    font-size: 1.4rem;
+		    fill: #555555;
+		    font-weight: 300;
+		}
+
+		.credit {
+		    font-size: 1.2rem;
+		    fill: #3e3e3e;
+		    font-weight: 400;
+		}
+
+		.axis path, .axis tick, .axis line {
+		      fill: none;
+		      stroke: none;
+		  }
+
+		text {
+		      font-size: 1.2rem;
+		      fill: #353535;
+		      font-weight: 400;
+		}
+
+		.legendTitle {
+            font-size: 11pt;
+            font-family: Consolas, courier;
+            fill: #265f81;
+		}
+
+ /* Popup window */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #242424 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
