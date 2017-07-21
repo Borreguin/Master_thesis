@@ -1,0 +1,65 @@
+id,tagname,alias,room,orientation,floor,category,location,units,breakout_group,alias_breakout_group
+1,V005_vent01_CO2,CO2 Ventilation NE,,NE,-,CO2,,ppm,A,CO2 Ventilation NE
+2,V022_vent02_CO2,CO2 Ventilation SW,,SW,-,CO2,,ppm,B,CO2 Ventilation SW
+3,V037_tabs_cold_SW,Cooling tabs SW,,SW,-,Cooling,,kWh,B_1,Cooling SW
+4,V075_tabs_cold_NO,Cooling tabs NE,,NE,-,Cooling,,kWh,A_1,Cooling NE
+5,V034_tabs_warm_SW,Heating tabs SW,,SW,-,Heating,,kWh,B_2,Heating SW
+6,V074_tabs_warm_NO,Heating tabs NE,,NE,-,Heating,,kWh,A_2,Heating NE
+7,V100_blinds_angle_N_o,Blinds angle N Out,,N,-,Blinds Angle,out,%,A_3,Blinds Angle NE
+8,V103_blinds_angle_N_i,Blinds angle N In,,N,-,Blinds Angle,in,%,A_3,Blinds Angle NE
+9,V106_blinds_angle_O_o,Blinds angle E Out,,E,-,Blinds Angle,out,%,A_3,Blinds Angle NE
+10,V109_blinds_angle_O_i,Blinds angle E In,,E,-,Blinds Angle,in,%,A_3,Blinds Angle NE
+11,V112_blinds_angle_S_o,Blinds angle S Out,,S,-,Blinds Angle,out,%,B_3,Blinds Angle SW
+12,V115_blinds_angle_S_i,Blinds angle S In,,S,-,Blinds Angle,in,%,B_3,Blinds Angle SW
+13,V118_blinds_angle_W_o,Blinds angle W Out,,W,-,Blinds Angle,out,%,B_3,Blinds Angle SW
+14,V121_blinds_angle_W_i,Blinds angle W In,,W,-,Blinds Angle,in,%,B_3,Blinds Angle SW
+15,V099_blinds_height_N_o,Blinds height N Out,,N,-,Blinds Height,out,%,A_4_1,"Blinds Height N-out, E-in"
+16,V102_blinds_height_N_i,Blinds height N In,,N,-,Blinds Height,in,%,A_4_2,"Blinds Height N-in, E-out"
+17,V105_blinds_height_O_o,Blinds height E Out,,E,-,Blinds Height,out,%,A_4_2,"Blinds Height N-in, E-out"
+18,V108_blinds_height_O_i,Blinds height E In,,E,-,Blinds Height,in,%,A_4_1,"Blinds Height N-out, E-in"
+19,V111_blinds_height_S_o,Blinds height S Out,,S,-,Blinds Height,out,%,B_4_2,"Blinds Height S-out, W-out, W-in"
+20,V114_blinds_height_S_i,Blinds height S In,,S,-,Blinds Height,in,%,B_4_1,Blinds Height S-in
+21,V117_blinds_height_W_o,Blinds height W Out,,W,-,Blinds Height,out,%,B_4_2,"Blinds Height S-out, W-out, W-in"
+22,V120_blinds_height_W_i,Blinds height W In,,W,-,Blinds Height,in,%,B_4_2,"Blinds Height S-out, W-out, W-in"
+23,V004_vent01_hum_out,Hum. Ventilation NE,,NE,-,Humidity,out,%,A_5_1,Hum. Ventilation NE
+24,V021_vent02_hum_out,Hum. Ventilation SW,,SW,-,Humidity,out,%,B_5_1,Hum. Ventilation SW
+25,V043_room101_hum,Hum. Room 101 ,101,N,1,Humidity,in,%,A_5_2,Hum. Room NE
+26,V045_room102_hum,Hum. Room 102,102,E,1,Humidity,in,%,A_5_2,Hum. Room NE
+27,V076_room103_hum,Hum. Room 103 ,103,S,1,Humidity,in,%,B_5_2,Hum. Room SW
+28,V078_room104_hum,Hum. Room 104 ,104,W,1,Humidity,in,%,B_5_2,Hum. Room SW
+29,V047_room201_hum,Hum. Room 201,201,N,2,Humidity,in,%,A_5_2,Hum. Room NE
+30,V049_room202_hum,Hum. Room 202,202,E,2,Humidity,in,%,A_5_2,Hum. Room NE
+31,V080_room203_hum,Hum. Room 203,203,S,2,Humidity,in,%,B_5_2,Hum. Room SW
+32,V082_room204_hum,Hum. Room 204,204,W,2,Humidity,in,%,B_5_2,Hum. Room SW
+33,V051_room301_hum,Hum. Room 301,301,N,3,Humidity,in,%,A_5_2,Hum. Room NE
+34,V053_room302_hum,Hum. Room 302,302,E,3,Humidity,in,%,A_5_2,Hum. Room NE
+35,V084_room303_hum,Hum. Room 303,303,S,3,Humidity,in,%,B_5_2,Hum. Room SW
+36,V086_room304_hum,Hum. Room 304,304,W,3,Humidity,in,%,B_5_2,Hum. Room SW
+37,V006_vent01_temp_out,Temp. Vent. NE Out,,NE,-,Temperature,out,'C,A_6_1,Temp. Vent. NE Out
+38,V023_vent02_temp_out,Temp. Vent. SW Out,,SW,-,Temperature,out,'C,B_6_1,Temp. Vent. SW Out
+39,V012_vent01_temp_in,Temp. Vent. NE In ,,NE,-,Temperature,in,'C,A_6_2,Temp. Vent. NE In 
+40,V029_vent02_temp_in,Temp. Vent. SW In,,SW,-,Temperature,in,'C,B_6_2,Temp. Vent. SW In
+41,V032_outdoor_temp,Outdoor Temperature,,N/A,-,Temperature,out,'C,C_1,Outdoor Temperature
+42,V044_room101_temp,Temp. Room 101 ,101,N,1,Temperature,in,'C,A_6_3,Temperature Room NE
+43,V046_room102_temp,Temp. Room 102,102,E,1,Temperature,in,'C,A_6_3,Temperature Room NE
+44,V077_room103_temp,Temp. Room 103,103,S,1,Temperature,in,'C,B_6_3,Temperature Room SW
+45,V079_room104_temp,Temp. Room 104,104,W,1,Temperature,in,'C,B_6_3,Temperature Room SW
+46,V048_room201_temp,Temp. Room 201,201,N,2,Temperature,in,'C,A_6_3,Temperature Room NE
+47,V050_room202_temp,Temp. Room 202,202,E,2,Temperature,in,'C,A_6_3,Temperature Room NE
+48,V081_room203_temp,Temp. Room 203,203,S,2,Temperature,in,'C,B_6_3,Temperature Room SW
+49,V083_room204_temp,Temp. Room 204,204,W,2,Temperature,in,'C,B_6_3,Temperature Room SW
+50,V052_room301_temp,Temp. Room 301,301,N,3,Temperature,in,'C,A_6_3,Temperature Room NE
+51,V054_room302_temp,Temp. Room 302,302,E,3,Temperature,in,'C,A_6_3,Temperature Room NE
+52,V085_room303_temp,Temp. Room 303,303,S,3,Temperature,in,'C,B_6_3,Temperature Room SW
+53,V087_room304_temp,Temp. Room 304,304,W,3,Temperature,in,'C,B_6_3,Temperature Room SW
+54,sre000b0,Sunshine,,N/A,-,Weather ,out,min,C_2,Sunshine
+55,rre150b0,Precipitation,,N/A,-,Weather ,out,mm,C_3,Precipitation
+56,tre200b0,Weather Temperature,,N/A,-,Weather ,out,'C,C_4,Weather Temperature
+57,V098,St. blind N Out,,N,-,Status blind,,I/O,,
+58,V101,St. blind N In,,N,-,Status blind,,I/O,,
+59,V104,St. blind E Out,,E,-,Status blind,,I/O,,
+60,V107,St. blind E In,,E,-,Status blind,,I/O,,
+61,V110,St. blind S Out,,S,-,Status blind,,I/O,,
+62,V113,St. blind S In,,S,-,Status blind,,I/O,,
+63,V116,St. blind W Out,,W,-,Status blind,,I/O,,
+64,V119,St. blind W In,,W,-,Status blind,,I/O,,
