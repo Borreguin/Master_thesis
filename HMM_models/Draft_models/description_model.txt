@@ -1,0 +1,31 @@
+DESCRIPTION FOR ALL HMM MODELS
+each model is a dictionary d where d['model'] is the model and d['hidden_state_name'] contains the name for each hidden state
+
+==============================
+Seasonal model: hmm_S_vector_C_vector_daily_(5/20/30) for k-fold = [5, 20, 30]
+
+object = [model, name_of_hidden_states]
+This model receives a sample of 12 values per day, the values comes from the *features
+(respecting that order) using the correspondent **categories.
+The value used for 'r_factor_u' and 'dev_u' are: 12 'C
+
+name		vector_to_use	**category_used		*features
+named_hmm_	S_vector	C (['C_1', 'C_4']	['25%', '75%', 'dev_u', 'mean', 'r_factor', 'r_factor_u']
+
+collection_to_use:	vector_daily
+
+==============================
+Correlation model: named_hmm_R_vector_A_A-A_3-A_4_1-A_4_2-A_6_1-A_6_2  for k-fold = [10]
+
+object = [model, name_of_hidden_states]
+
+object = [model, name_of_hidden_states]
+This model receives a sample of 10 values per day, the values comes from the *correlation
+(respecting that order) between CO2 level and each varaible of the selected **categories.
+
+name		vector_to_use	**category_used				*correlation
+named_hmm_	R_vector	A (['A_3, A_4_1, A_4_2, A_6_1, A_6_2']	CO2 level vs. category used 
+
+collection_to_use:	vector_daily
+
+
