@@ -1,0 +1,398 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 2.4 (22/11/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Version 2.x major modifications by:
+% Vel (vel@latextemplates.com)
+%
+% This template is based on a template by:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+%
+% Template license:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+11pt, % The default document font size, options: 10pt, 11pt, 12pt
+%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+english, % ngerman for German
+singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+%toctotoc, % Uncomment to add the main table of contents to the table of contents
+%parskip, % Uncomment to add space between paragraphs
+%nohyperref, % Uncomment to not load the hyperref package
+headsepline, % Uncomment to get a line under the header
+chapterinoneline, % Uncomment to place the chapter title next to the number on one line
+%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+]{MastersDoctoralThesis} % The class file specifying the document structure
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage{palatino} % Use the Palatino font by default
+
+\usepackage[backend=bibtex8,style=ieee,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+
+%\usepackage{natbib} %Use for making the bibliography more powerfull 
+%\usepackage[backend=biber]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+
+\addbibresource{references.bib} % The filename of the bibliography
+
+
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+\RequirePackage{graphics}
+\RequirePackage{rotating}
+\RequirePackage{epstopdf}
+\RequirePackage[export]{adjustbox}
+\usepackage{indentfirst}
+
+%use this for small table of contents at the beginning of each chapter
+\usepackage{minitoc}
+%for degree sign °
+\usepackage{textcomp}
+
+\usepackage{amsmath,amsfonts,amssymb,mathrsfs,relsize} %for math notation
+
+%for tables
+\usepackage{multirow, floatrow, xcolor, color, colortbl, bigstrut, longtable}
+%\usepackage[table,]{xcolor}
+
+%for horizontal pages:
+\usepackage{pdflscape, geometry}
+
+%for selecting specific pages
+\usepackage{pdfpages}
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=2 cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{A proposed method for unsupervised anomaly detection for a multivariate building dataset} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\supervisor{Dr. Julien \textsc{Nembrini}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\examiner{Dr. Denis \textsc{Lalanne}} % Your examiner's name, print it elsewhere with \examname
+
+\degree{Master of Science in Computer Science} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
+
+
+
+\author{Roberto G. \textsc{Sánchez A.}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
+\addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
+
+\subject{Computer Science} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
+
+
+\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\university{\href{http://www.unifr.ch}{University of Fribourg}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+\department{\href{http://diuf.unifr.ch}{Department of Informatics}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+\group{\href{http://human-ist.unifr.ch/}{Human-IST Group}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
+\faculty{\href{}{Faculty of Science}} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+}
+
+
+
+\begin{document}
+%\includepdf[pages={1-5}]{main2.pdf}
+
+
+\dominitoc
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+% uni logo
+\begin{figure}
+        \centering
+                \includegraphics[width=.3\textwidth,valign=t]{Pic/MSc_quer.png}
+        %\hfill
+        %        \includegraphics[width=.2\textwidth,valign=t]{human-ist_logo.eps}
+        %\vspace{20mm}
+\end{figure}
+\begin{center}
+
+\HRule \\[0.2cm] % Horizontal line
+{\huge \bfseries \ttitle\par}\vspace{0.4cm} % Thesis title
+\HRule \\[0.2cm] % Horizontal line
+
+
+\textsc{\Large Master Thesis}\\[0.5cm] % Thesis type
+\vspace*{.06\textheight}
+
+ 
+\begin{minipage}[t]{0.35\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+\href{http://}{\authorname}\footnotemark 
+% Author name - remove the \href bracket to remove the link
+\end{flushleft}
+\end{minipage} 
+\footnotetext{robertogonzalo.sanchezalban@unifr.ch, University of Fribourg}
+\begin{minipage}[t]{0.35\textwidth}
+\begin{flushright} \large
+\emph{Supervisor:} \\
+\href{http://human-ist.unifr.ch/team/julien-nembrini}{\supname} \footnotemark 
+% Supervisor name - remove the \href bracket to remove the link  
+\end{flushright} 
+\end{minipage}
+\footnotetext{julien.nembrini@unifr.ch, University of Fribourg} 
+\\[0.8cm]
+
+\begin{minipage}[t]{0.4\textwidth}
+\begin{center}\large
+\emph{Professor:} \\
+\href{http://diuf.unifr.ch/people/lalanned/}{ \examname}  \footnotemark
+% Supervisor name - remove the \href bracket to remove the link  
+\end{center}
+\end{minipage} 
+\footnotetext{denis.lalanne@unifr.ch, University of Fribourg}
+\\[0.8cm]
+
+\vspace*{.03\textheight}
+{\scshape\LARGE \univname\par}\vspace{1.5cm} % University name
+
+%\vfill
+%
+%\large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
+%\textit{in the}\\[0.4cm]
+\groupname\\\deptname\\[1cm] % Research group name and department name
+ 
+%\vfill
+
+{\large \today}\\[3cm] % Date
+%\includegraphics{Logo} % University/department logo - uncomment to place it
+ 
+%\vfill
+
+\begin{figure}[htp]
+    \centering
+    \includegraphics[scale=0.30]{Pic/UNI_Bern.png}\hfill
+    \includegraphics[scale=0.30]{Pic/UNI_Neuenburg.png}\hfill
+    \includegraphics[scale=0.80]{Pic/UNI_Fribourg.png}
+  \end{figure}
+
+\end{center}
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{declaration}
+\addchaptertocentry{\authorshipname} % Add the declaration to the table of contents
+\noindent I, \authorname, declare that this thesis titled, "\ttitle" and the work presented in it, is my own
+original work. I declare that I have acknowledged the work of others by providing detailed
+references of said work. Furthermore, I declare that no part of this thesis has previously been
+submitted for a degree or any other qualification at this University or any other institution.
+I am aware of the University’s regulations concerning plagiarism, including those regulations
+concerning disciplinary actions that may result from plagiarism.\\
+
+ 
+\noindent Signed:\\
+\rule[0.5em]{25em}{0.5pt} % This prints a line for the signature
+ 
+\noindent Date:\\
+\rule[0.5em]{25em}{0.5pt} % This prints a line to write the date
+\end{declaration}
+
+\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+\vspace*{0.2\textheight}
+
+\noindent\enquote{\itshape Practice makes the Master, the more you practice the better you get. Do not forget that God is your best coach.}\bigbreak
+
+\hfill Roberto Sánchez A.
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+Ubiquitous devices employed in building facilities are allowing us to acquire a diverse amount of data relative to the internal systems of buildings. This is contributing to the growing awareness of the gap that exists between the desired performance of a building and its actual performance. Automated fault detection and diagnostic (AFDD) systems have been showed to be effective at detecting the root cause of performance problems.  This master thesis is interested in finding motif cluster (typical patterns) and discord clusters (atypical/abnormal patterns), two types of patterns used by some AFDD approaches. Our approach attains to discover daily patterns in a multivariate fashion for a studied building dataset by using the Gaussian Hidden Markov models. The discovered motif cluster profiles define the typical performance of the building, while the discovered discord cluster profiles spot potential performance problems of the building. Three proposed models create a label data frame that summarize all the daily patterns in a table allowing the researcher to do further aggregation about the motif/discord cluster profiles. The proposed models where tested in a case study where the North-East and South-West ventilation systems of the studied building were compared. The results provide information about the pattern evolution across different seasons and years, as well as the dynamics between various variables. In addition, anomalous daily profiles were spotted as a multivariate pattern in the North-East ventilation system, that demonstrate how powerful this approach is. Finally, this approach had good feedback from the building experts and the potential of our approach motivates further research.
+\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\begin{acknowledgements}
+\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+\textit{
+\newline
+I would like to thank all the persons who helped me throughout this master thesis and made the
+project possible. In particular,
+\newline
+\newline
+Dr. Denis Lalanne for creating a space of research, and the opportunity to exploit my talents in his group of research. 
+\newline
+\newline
+Dr. Julien Nembrini, my supervisor, who inspired me through several ideas and his critical thinking during the project. Thanks for each suggestions that was an important contribution to this work. I appreciate his time and patience.     
+\newline
+\newline
+Esther, Sven and Theresa for their help with the proofreading and grammar corrections. 
+\newline
+\newline
+Colleagues and friends of the faculty for their encouragement (José, Marin, Minh).
+\newline
+\newline
+My family, for their support during my whole residence in Fribourg, even if they were not there... their prayers could touch me. Hilda, Gonzalo, Jessy and Pablo.  
+\newline
+\newline
+Renate, my love, who was supporting me all the time during this master thesis, you put a smile in my heart. 
+\newline
+\newline
+Abraham, Issac and Jacob's God, for being my guide in everything I do.
+}
+\end{acknowledgements}
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\tableofcontents \mtcaddchapter % Prints the main table of contents
+
+\listoffigures \mtcaddchapter% Prints the list of figures
+
+\listoftables \mtcaddchapter% Prints the list of tables
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+
+\textbf{AFDD} & \textbf{A}utomated \textbf{F}ault \textbf{D}etection and \textbf{D}iagnostic \\
+\textbf{pdf} & \textbf{P}robability \textbf{D}ensity \textbf{F}unction\\
+\textbf{OcP} & \textbf{Oc}cupant \textbf{P}resence\\
+\textbf{HVAC} & \textbf{H}eating \textbf{V}entilation and \textbf{A}ir \textbf{C}onditioning \\
+\textbf{TABS} & \textbf{T}hermally \textbf{A}ctive \textbf{B}uilding \textbf{S}tructure \\
+\textbf{IAQ} & \textbf{I}ndoor \textbf{A}ir \textbf{Q}uality \\
+\textbf{ASHRAE} & \textbf{A}merican \textbf{S}ociety of \textbf{H}eating, \textbf{R}efrigeration and \textbf{A}ir \textbf{C}onditioning \textbf{E}ngineers  \\
+\textbf{MVPA} & \textbf{M}ulti\textbf{V}ariate \textbf{A}nalysis \\
+\textbf{HMM} & \textbf{H}idden \textbf{M}arkov \textbf{M}odel \\
+\textbf{GaHMM} & \textbf{Ga}ussian \textbf{H}idden \textbf{M}arkov \textbf{M}odel \\
+\textbf{IoT} & \textbf{I}nternet \textbf{o}f \textbf{T}hings \\
+\textbf{SAX} & \textbf{S}ymbolic \textbf{A}ggregate appro\textbf{X}imation \\
+\textbf{PCA} & \textbf{P}rincipal \textbf{C}omponent \textbf{A}nalysis \\
+
+
+\end{abbreviations}
+
+%----------------------------------------------------------------------------------------
+%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+%\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
+
+% The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
+
+%Speed of Light & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
+%Constant Name & $Symbol$ & $Constant Value$ with units\\
+
+%\end{constants}
+
+%----------------------------------------------------------------------------------------
+%	SYMBOLS
+%----------------------------------------------------------------------------------------
+
+%\begin{symbols}{lll} % Include a list of Symbols (a three column table)
+%
+%$a$ & distance & \si{\meter} \\
+%$P$ & power & \si{\watt} (\si{\joule\per\second}) \\
+%%Symbol & Name & Unit \\
+%
+%\addlinespace % Gap to separate the Roman symbols from the Greek
+%
+%$\omega$ & angular frequency & \si{\radian} \\
+%
+%\end{symbols}
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+%\dedicatory{For/Dedicated to/To my\ldots} 
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{thesis} % Return the page headers back to the "thesis" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+
+\include{Chapters/Chapter1}
+\include{Chapters/Chapter2} 
+\include{Chapters/Chapter3}
+\include{Chapters/Chapter4} 
+\include{Chapters/Chapter5} 
+\include{Chapters/Chapter6}
+
+
+%%----------------------------------------------------------------------------------------
+%%	THESIS CONTENT - APPENDICES
+%%----------------------------------------------------------------------------------------
+%
+\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+%
+%% Include the appendices of the thesis as separate files from the Appendices folder
+%% Uncomment the lines as you write the Appendices
+%
+%
+%
+
+\include{Appendices/AppendixA}
+\include{Appendices/AppendixB}
+%\include{Appendices/AppendixC}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\printbibliography[heading=bibintoc, title={References}]
+
+
+
+%----------------------------------------------------------------------------------------
+\end{document}  

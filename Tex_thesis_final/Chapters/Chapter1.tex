@@ -1,0 +1,40 @@
+% Chapter 1
+\chapter{Introduction} % Main chapter title
+\label{Chapter1} % For referencing the chapter elsewhere, use \ref{Chapter1} 
+\minitoc
+%----------------------------------------------------------------------------------------
+
+% Define some commands to keep the formatting separated from the content 
+\newcommand{\keyword}[1]{\textbf{#1}}
+\newcommand{\tabhead}[1]{\textbf{#1}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\file}[1]{\texttt{\bfseries#1}}
+\newcommand{\option}[1]{\texttt{\itshape#1}}
+
+%----------------------------------------------------------------------------------------
+
+\section{Motivation}
+
+The expansion of the use of ubiquitous devices (sensors and actuators) in buildings have allowed to improve building performance and improve the occupant experience during these last two decades \cite{de2017occupancy,abdallah2015developing,dong2009sensor}. However, it is estimated that as much as 30\% of energy consumed by commercial buildings is due to an unappropriated use of internal systems like HVAC, TABS, lighthing and others in existing building automation systems (BASs) \footnote{2012 Commercial Building Energy Consumption Survey (CBECS)}. BASs provide an automatic control of the internal systems in buildings and have the capacity to collect underlying data for postoperative analysis. Some of the objectives of postoperative analysis are the improvement of the overall performance of the building, comfort-enhancement for occupants and improving energy efficiency  \cite{miller2015automated,capozzoli2015fault}.
+
+
+Nowadays, thanks to the availability of data coming from the internal systems of buildings (e.g. HVAC, TABS,
+lightning, etc.), there is a growing awareness of the gap that exists between the original building design and the actual performance of the building \cite{miller2015automated}. Nevertheless, there is still a need for tools to assist the improvement of the building performance. Automated fault detection and diagnostic (AFDD) systems have been shown to be effective at detecting the root cause of performance problems \cite{kim2017review}. By reviewing the literature, one can see that the use of artificial intelligence and data mining techniques for AFDD \cite{capozzoli2015fault} is still minimal in this domain. We believe therefore, that the potential of artificial intelligence and data mining techniques can be exploited in the goal of providing more intuitive and powerful tools to detect performance problems in buildings.    
+
+
+%----------------------------------------------------------------------------------------
+
+\section{Objectives}
+
+There is not yet an uniform consensus for building performance assessment. Some approaches such as building benchmarking and the use of performance metrics have served to evaluated buildings in specific areas like energy consumption. In other cases, it is still unclear what indoor variables need to be measured to carry out a building performance assessment \cite{owens2012measuring, web_NIOSH}. Normally the behavior(performance) of a building might be ruled by recommendations and accepted industry practices (e.g. ASHRAE's standards, GBPN's policies, etc). For example, one can find standards related to the indoor environmental quality (IEQ) where a range of building variables are monitored (e.g. $CO_2$, noise, temperature, etc.) and defined according to the level of acceptability judged by its occupants, or by the technical parameters of underlying systems \cite{owens2012measuring}. However, one cannot find so much information about the internal dynamics of the building. We notice that there is a lack in building science literature defining the actual behavior and the dynamics between monitored variables of a building. This is because most of the AFDD studies cannot make generalized affirmations about the performance of buildings since each building is unique. Therefore, each AFDD is based on diagnostic methods such as: Historic-Based, qualitative and quantitative-based approaches are attuned to the particular building in question.\cite{katipamula2005methods}. 
+
+
+One of the objectives of this thesis is to propose a methodology that assists the stakeholders (designers, architects and occupants) in defining the typical "behavior" \footnote{This term expresses the idea that the indoor environment of a building changes depending on external conditions, the interaction with humans, maintenance operations, or any other phenomena that produces this change.} of the building, so that in this way, experts can benefit from this gain of information and, finally improve the buildings performance, occupant comfort and find opportunities to save energy. 
+
+This thesis is devoted to proposing a methodology for conducting unsupervised fault detection using machine learning algorithms in a multivariate building dataset. We are interested in defining the "behavior" of the building across months, seasons and years. This, in our opinion, can be done by finding the typical patterns of the variables. Once we have the typical patterns (i.e. daily profile) of the building, we can detect those days where the building’s variables fluctuate very different from its typical patterns, and therefore, potential performance problems can be detected. 
+In other words, this work seeks to find the most common patterns that appear in measured variables in a building, and discovering also the common interrelationship that exists between them. One last point of interest of this work is to find a practical application of the proposed method for fault preventive analysis, and predictive analysis using the discovered typical patterns.
+ 
+ 
+\section{Project Outline}
+
+The first chapter of this thesis introduces the motivations and the objectives of performing anomaly detection in buildings. The second chapter reviews the state of the art of Automated Fault Detection and Diagnostics AFDD's and the relating topics that are needed for the our proposition, that is the \textit{GaHMM - profile, seasonal and interactional} models, explained in section \ref{modeling}. The third chapter describes the studied building and his correspondent multivariate dataset. The fourth chapter explains the modeling process, the implementation of the \textit{GaHMM - profile, seasonal and interactional} models. This chapter includes an evaluation part where the reader can appreciate the clustering quality of our proposed models. The fifth chapter presents the results of each of our proposed model, those models are tested in case of study for finding anomalies in the ventilation systems of the building. Finally, we include expert building feedback at the last chapter. Our proposed methodology could serve for further research according to the expert remarks.
