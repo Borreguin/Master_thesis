@@ -21,3 +21,22 @@ namics between various variables. In addition, anomalous daily profiles were spo
 multivariate pattern in the North-East ventilation system, that demonstrate how powerful this
 approach is. Finally, this approach had good feedback from the building experts and the po-
 tential of our approach motivates further research.
+
+## Proposed mehodology for finding typical/atypical patterns:
+In general, the proposed methodology uses unsupervised machine learning for discovering the typical and/or unique patterns, then using Hierarchical Agglomerative Clustering (HAC) techniques, one determines the existing families of profiles (branchs of the HAC's dendogram) that exits in the investigated variable. Based on the result, one can determine wich clusters are typical (motifs) and which are atypical (discords). For example, in figure 5.8 the typical patterns are the profiles: 33, 1, 9, 4, 25, 17, 22, 11 and 27. In constrast, profile 29 differs from previous profiles, therefore this profile is considered as an atypical pattern. 
+
+![General_methodology](https://github.com/Borreguin/Master_thesis/blob/master/static/img/Dendo_cluster_4.JPG)
+
+This work uses a Gaussian Hidden Markov Model for finding the different patterns that exist in a time series. In this way, each profile is a group of days where the studied variable have a similar behavior. When the model is good trained (see Fig. 4.24 b) then the shape of each profile is well defined (there are not much outliers), while a bad trained model gives an undefined shape with several outliers (see Fig. 4.24 a).
+
+![profile_example](https://github.com/Borreguin/Master_thesis/blob/master/static/img/C_profile_2.JPG)
+
+Fig. 4.18, shows an hypothetical example of what the Gaussian Hidden Markov Model does. The time series is splitted in samples and once the final GaHMM model is trainned then each sample can be identified by a number, which is the ID profile. The result of this process is used as it was explained in above for creating the families of profiles, through the HAC´s techniques. 
+
+![General_methodology](https://github.com/Borreguin/Master_thesis/blob/master/static/img/Hyp_example_find_clusters.JPG)
+
+You can read more details of this work in the following link:
+https://github.com/Borreguin/Master_thesis/blob/master/readme.pdf
+
+or make questions to: rg.sanchez.a@gmail.com
+
